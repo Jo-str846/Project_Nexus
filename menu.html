@@ -3,9 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Drinks Menu | Project Nexus Café</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <!-- Responsive Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">PROJECT NEXUS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="menu.html">Drinks Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bakery.html">Bakery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="coffee-beans.html">Shop Beans</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Header -->
+    <header class="bg-light py-5 border-bottom text-center">
+        <div class="container my-4">
+            <h1 class="display-5 fw-bold">The Liquid Craft</h1>
+            <p class="lead text-muted">Meticulously calibrated espresso extractions and carefully measured slow-bar filter brews.</p>
+        </div>
+    </header>
+
+    <div class="container my-4 text-center">
+        <div class="btn-group flex-wrap gap-2" role="group" aria-label="Menu Category Filter">
+            <button type="button" class="btn btn-primary px-4 rounded-pill filter-btn" data-target="all">All Beverages</button>
+            <button type="button" class="btn btn-outline-secondary px-4 rounded-pill filter-btn" data-target="espresso">Espresso Bar</button>
+            <button type="button" class="btn btn-outline-secondary px-4 rounded-pill filter-btn" data-target="filter">Slow Bar (Filter)</button>
+            <button type="button" class="btn btn-outline-secondary px-4 rounded-pill filter-btn" data-target="cold">Iced & Cold Brew</button>
+        </div>
+    </div>
+
+    <main class="container my-5">
+        <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3" id="menu-container">
+            
+            <!-- Item 1: Espresso -->
+            <div class="col menu-item" data-category="espresso">
+                <div class="card h-100 cafe-card p-3 shadow-sm">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-baseline">
+                                <h4 class="card-title h5 mb-2">Double Espresso</h4>
+                                <span class="fw-bold text-dark">KES 320</span>
+                            </div>
+                            <p class="card-text text-muted small">A concentrated 1:2 extraction using our seasonally rotating single-origin Kenyan beans. Expect a bright, phosphoric acidity with citrus overtones.</p>
+                        </div>
+                        <div class="mt-3"><span class="badge bg-secondary">Hot</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2: Espresso -->
+            <div class="col menu-item" data-category="espresso">
+                <div class="card h-100 cafe-card p-3 shadow-sm">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-baseline">
+                                <h4 class="card-title h5 mb-2">Flat White</h4>
+                                <span class="fw-bold text-dark">KES 420</span>
+                            </div>
+                            <p class="card-text text-muted small">Double ristretto shot paired with velvety micro-foam, offering a perfectly balanced, intense coffee profile with natural sweetness.</p>
+                        </div>
+                        <div class="mt-3"><span class="badge bg-secondary">Hot</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3: Filter -->
+            <div class="col menu-item" data-category="filter">
+                <div class="card h-100 cafe-card p-3 shadow-sm">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-baseline">
+                                <h4 class="card-title h5 mb-2">V60 Pour Over</h4>
+                                <span class="fw-bold text-dark">KES 480</span>
+                            </div>
+                            <p class="card-text text-muted small">Hand-poured filter method emphasizing delicate, tea-like clarity, floral aromatics, and clean berry tasting notes.</p>
+                        </div>
+                        <div class="mt-3"><span class="badge bg-secondary">Hot</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4: Filter -->
+            <div class="col menu-item" data-category="filter">
+                <div class="card h-100 cafe-card p-3 shadow-sm">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-baseline">
+                                <h4 class="card-title h5 mb-2">AeroPress Brew</h4>
+                                <span class="fw-bold text-dark">KES 450</span>
+                            </div>
+                            <p class="card-text text-muted small">An immersion extraction method providing a robust body and rich mouthfeel while preserving underlying fruit sweetness.</p>
+                        </div>
+                        <div class="mt-3"><span class="badge bg-secondary">Hot</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5: Cold -->
+            <div class="col menu-item" data-category="cold">
+                <div class="card h-100 cafe-card p-3 shadow-sm">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-baseline">
+                                <h4 class="card-title h5 mb-2">Nitro Cold Brew</h4>
+                                <span class="fw-bold text-dark">KES 520</span>
+                            </div>
+                            <p class="card-text text-muted small">Our signature cold brew steeped for 18 hours and infused with food-grade nitrogen for a creamy, stout-like cascading pour.</p>
+                        </div>
+                        <div class="mt-3"><span class="badge bg-info text-dark">Cold</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 6: Cold -->
+            <div class="col menu-item" data-category="cold">
+                <div class="card h-100 cafe-card p-3 shadow-sm">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-baseline">
+                                <h4 class="card-title h5 mb-2">Iced Orange Espresso Tonic</h4>
+                                <span class="fw-bold text-dark">KES 550</span>
+                            </div>
+                            <p class="card-text text-muted small">A refreshing layered combination of premium tonic water, a splash of fresh blood orange extract, finished with an espresso float.</p>
+                        </div>
+                        <div class="mt-3"><span class="badge bg-info text-dark">Cold</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-4 bg-dark text-white-50 mt-auto">
+        <div class="container text-center">
+            <small>&copy; 2026 Project Nexus Café. Built for Web Application Development Coursework.</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
