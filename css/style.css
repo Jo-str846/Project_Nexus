@@ -1,0 +1,117 @@
+/* ==========================================================================
+   Project Nexus Café - Core Design & Styles
+   ========================================================================== */
+
+:root {
+    /* Color Palette */
+    --primary-coffee: #4A3525;       /* Rich Espresso Roast */
+    --secondary-latte: #8B6E56;     /* Creamy Warm Latte */
+    --accent-gold: #D4AF37;         /* Warm Pastry Crust / Accent */
+    --light-cream: #FAF7F2;         /* Soft Background for readability */
+    --dark-charcoal: #1C1A17;       /* Deep Contrast text/bg */
+    --pure-white: #FFFFFF;
+    
+    /* Typography Typography overrides */
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+    
+    /* Animation Speeds */
+    --transition-smooth: all 0.3s ease-in-out;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--light-cream);
+    color: var(--dark-charcoal);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition-smooth);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--primary-coffee);
+}
+
+/*Bootstrap Component Overrides & Polish */
+.navbar {
+    background-color: var(--primary-coffee) !important;
+    border-bottom: 2px solid var(--accent-gold);
+}
+
+.navbar-brand {
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    transition: var(--transition-smooth);
+}
+
+.nav-link:hover, 
+.nav-link.active {
+    color: var(--accent-gold) !important;
+}
+
+/* Custom Premium Buttons */
+.btn-primary {
+    background-color: var(--primary-coffee);
+    border-color: var(--primary-coffee);
+    transition: var(--transition-smooth);
+}
+
+.btn-primary:hover, 
+.btn-primary:focus {
+    background-color: var(--secondary-latte);
+    border-color: var(--secondary-latte);
+}
+
+.btn-outline-secondary {
+    color: var(--primary-coffee);
+    border-color: var(--primary-coffee);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--primary-coffee);
+    color: var(--pure-white);
+}
+
+/* Footer Accent alignment */
+footer {
+    background-color: var(--dark-charcoal) !important;
+    border-top: 1px solid var(--secondary-latte);
+}
+
+/* Custom Utility Classes for Interactive & Aesthetic Cards */
+.cafe-card {
+    background: var(--pure-white);
+    border: 1px solid rgba(139, 110, 86, 0.15);
+    border-radius: 8px;
+    transition: var(--transition-smooth);
+}
+
+.cafe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(74, 53, 37, 0.1);
+    border-color: var(--secondary-latte);
+}
+
+/* Optional Dark Mode Configuration Hooks */
+body.dark-theme {
+    background-color: var(--dark-charcoal);
+    color: var(--light-cream);
+}
+
+body.dark-theme h1, 
+body.dark-theme h2, 
+body.dark-theme h3 {
+    color: var(--light-cream);
+}
+
+body.dark-theme .cafe-card {
+    background: #262320;
+    border-color: #3D3732;
+    color: var(--light-cream);
+}
