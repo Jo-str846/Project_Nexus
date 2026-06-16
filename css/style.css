@@ -98,20 +98,51 @@ footer {
     border-color: var(--secondary-latte);
 }
 
-/* Optional Dark Mode Configuration Hooks */
+/* 🌙 Dynamic Dark Theme Overrides */
 body.dark-theme {
     background-color: var(--dark-charcoal);
     color: var(--light-cream);
 }
 
+/* Force headings to turn light cream for high contrast */
 body.dark-theme h1, 
 body.dark-theme h2, 
-body.dark-theme h3 {
-    color: var(--light-cream);
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5 {
+    color: var(--light-cream) !important;
 }
 
+/* Fix the Header Page Background from staying stark white */
+body.dark-theme header.bg-light {
+    background-color: #262320 !important;
+    border-bottom: 1px solid #3D3732 !important;
+}
+
+/* Ensure secondary texts/prices remain completely legible inside dark components */
+body.dark-theme .text-muted,
+body.dark-theme .card-text {
+    color: #C1B5A9 !important; /* Soft sand gray for high text contrast readability */
+}
+
+body.dark-theme .text-dark {
+    color: var(--accent-gold) !important; /* Turns item prices gold for a premium look */
+}
+
+/* Style active card wrappers inside dark mode */
 body.dark-theme .cafe-card {
     background: #262320;
     border-color: #3D3732;
     color: var(--light-cream);
+}
+
+/* Adjust unselected menu filter buttons for clean visibility */
+body.dark-theme .btn-outline-secondary {
+    color: var(--light-cream);
+    border-color: var(--secondary-latte);
+}
+
+body.dark-theme .btn-outline-secondary:hover {
+    background-color: var(--secondary-latte);
+    color: var(--pure-white);
 }
