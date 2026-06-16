@@ -52,10 +52,56 @@ function initMenuFilter() {
 }
 
 /**
- * Feature 2: Prepares layout hooks for the upcoming ambient theme switch
+ * Feature 2: Inject Floating Theme Toggle Button and Handle State Shifting
  */
 function initThemeToggle() {
-    // This will be expanded with a floating toggle button injection 
-    // and localStorage caching once our page layouts are finalized.
-    console.log("Nexus Cafe System: Theme engine loaded and listening.");
+    // 1. Create and style the floating toggle element dynamically
+    const toggleBtn = document.createElement('button');
+    toggleBtn.id = 'theme-toggle-btn';
+    toggleBtn.setAttribute('aria-label', 'Toggle theme mode');
+    
+    // Inline positioning styles to keep it floating beautifully on the bottom right
+    toggleBtn.style.position = 'fixed';
+    toggleBtn.style.bottom = '25px';
+    toggleBtn.style.right = '25px';
+    toggleBtn.style.zIndex = '2000';
+    toggleBtn.style.padding = '12px 16px';
+    toggleBtn.style.borderRadius = '50px';
+    toggleBtn.style.border = '2px solid var(--accent-gold)';
+    toggleBtn.style.cursor = 'pointer';
+    toggleBtn.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+    toggleBtn.style.transition = 'var(--transition-smooth)';
+
+    // 2. Read user preference memory cache from LocalStorage
+    const currentTheme = localStorage.getItem('nexus-theme') || 'light';
+    if (currentTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        toggleBtn.innerHTML = '☀️ Light Mode';
+        toggleBtn.style.backgroundColor = 'var(--light-cream)';
+        toggleBtn.style.color = 'var(--dark-charcoal)';
+    } else {
+        toggleBtn.innerHTML = '🌙 Dark Mode';
+        toggleBtn.style.backgroundColor = 'var(--primary-coffee)';
+        toggleBtn.style.color = 'var(--pure-white)';
+    }
+
+    // 3. Append button element to body
+    document.body.appendChild(toggleBtn);
+
+    // 4. Click listener loop to swap styles and update local memory state
+    toggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        
+        if (document.body.classList.contains('dark-theme')) {
+            localStorage.setItem('nexus-theme', 'dark');
+            toggleBtn.innerHTML = '☀️ Light Mode';
+            toggleBtn.style.backgroundColor = 'var(--light-cream)';
+            toggleBtn.style.color = 'var(--dark-charcoal)';
+        } else {
+            localStorage.setItem('nexus-theme', 'light');
+            toggleBtn.innerHTML = '🌙 Dark Mode';
+            toggleBtn.style.backgroundColor = 'var(--primary-coffee)';
+            toggleBtn.style.color = 'var(--pure-white)';
+        }
+    });
 }
