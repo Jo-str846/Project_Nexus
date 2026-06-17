@@ -98,45 +98,59 @@ footer {
     border-color: var(--secondary-latte);
 }
 
-/* 🌙 Dynamic Dark Theme Overrides */
 body.dark-theme {
     background-color: var(--dark-charcoal);
     color: var(--light-cream);
 }
 
-/* Force headings to turn light cream for high contrast */
+/* 1. Global text and heading contrast fixes inside dark layouts */
 body.dark-theme h1, 
 body.dark-theme h2, 
 body.dark-theme h3,
 body.dark-theme h4,
-body.dark-theme h5 {
+body.dark-theme h5,
+body.dark-theme h6 {
     color: var(--light-cream) !important;
 }
 
-/* Fix the Header Page Background from staying stark white */
+/* 2. Page header background correction */
 body.dark-theme header.bg-light {
     background-color: #262320 !important;
     border-bottom: 1px solid #3D3732 !important;
 }
 
-/* Ensure secondary texts/prices remain completely legible inside dark components */
+/* 3. Text utility colors protection */
 body.dark-theme .text-muted,
-body.dark-theme .card-text {
-    color: #C1B5A9 !important; /* Soft sand gray for high text contrast readability */
+body.dark-theme .card-text,
+body.dark-theme form .text-muted {
+    color: #C1B5A9 !important; /* Soft sand gray readability */
 }
 
 body.dark-theme .text-dark {
-    color: var(--accent-gold) !important; /* Turns item prices gold for a premium look */
+    color: var(--accent-gold) !important; /* Emphasize prices and key details in gold */
 }
 
-/* Style active card wrappers inside dark mode */
-body.dark-theme .cafe-card {
-    background: #262320;
-    border-color: #3D3732;
-    color: var(--light-cream);
+/* 4. Adaptive Component Overrides (Menu & Contact Cards) */
+body.dark-theme .cafe-card,
+body.dark-theme .card.bg-white { 
+    background-color: #262320 !important; /* Swaps form background from white to warm dark */
+    border: 1px solid #3D3732 !important;
+    color: var(--light-cream) !important;
 }
 
-/* Adjust unselected menu filter buttons for clean visibility */
+/* 5. Form Input Field Adjustments for Dark Environments */
+body.dark-theme .form-control,
+body.dark-theme .form-select {
+    background-color: #1C1A17 !important;
+    border-color: #4A3525 !important;
+    color: var(--light-cream) !important;
+}
+
+body.dark-theme .form-control::placeholder {
+    color: #8B6E56 !important; /* Warm placeholder contrast */
+}
+
+/* 6. Unselected Menu Filters */
 body.dark-theme .btn-outline-secondary {
     color: var(--light-cream);
     border-color: var(--secondary-latte);
