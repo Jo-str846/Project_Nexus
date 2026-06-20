@@ -160,3 +160,75 @@ body.dark-theme .btn-outline-secondary:hover {
     background-color: var(--secondary-latte);
     color: var(--pure-white);
 }
+
+/* Maintain a beautiful, uniform panoramic frame across all slides */
+.carousel-image-wrapper {
+    width: 100%;
+    height: 320px; 
+    position: relative;
+    overflow: hidden;
+    background-color: var(--dark-charcoal);
+}
+
+
+@media (min-width: 768px) {
+    .carousel-image-wrapper {
+        height: 480px; 
+    }
+}
+
+/* Ensure sliding photos crop crisply without dropping raw image quality */
+.carousel-optimized-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Premium dark blur styling for textual layout overlays */
+.carousel-caption {
+    background: rgba(28, 26, 23, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    max-width: 550px;
+    margin: 0 auto;
+    bottom: 30px;
+}
+
+/* Force all headers and descriptions to pivot to high-contrast creams/whites */
+.dark-theme h1,
+.dark-theme .display-5,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme .card-title {
+    color: var(--light-cream) !important;
+}
+
+/* Fix for the main menu section header descriptions */
+.dark-theme .text-muted,
+.dark-theme header p {
+    color: #CBAA8D !important; 
+}
+
+/* Fix for reservation form headers inside the contact card element */
+.dark-theme .card legend, 
+.dark-theme .card h3,
+.dark-theme #reservation-form label {
+    color: var(--light-cream) !important;
+}
+
+/* Ensure form inputs maintain highly visible boundaries in dark mode */
+.dark-theme .form-control,
+.dark-theme .form-select {
+    background-color: #262320 !important;
+    border-color: #4A3525 !important;
+    color: var(--pure-white) !important;
+}
+
+/* Ensure placeholder texts are easily readable when empty */
+.dark-theme .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}

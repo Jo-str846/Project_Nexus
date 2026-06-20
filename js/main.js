@@ -116,7 +116,8 @@ function initFormValidation() {
         if (nameInput.value.trim() === '') {
             nameInput.classList.add('is-invalid');
             isFormValid = false;
-        } else {
+        }
+        else {
             nameInput.classList.remove('is-invalid');
             nameInput.classList.add('is-valid');
         }

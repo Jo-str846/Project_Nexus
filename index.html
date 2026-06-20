@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Responsive Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">PROJECT NEXUS</a>
@@ -24,22 +25,71 @@
                     <li class="nav-item"><a class="nav-link" href="coffee-beans.html">Shop Beans</a></li>
                     <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
                     <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-
+    <!-- Page Header -->
     <header class="bg-light py-5 border-bottom">
         <div class="container text-center my-5">
             <h1 class="display-4 fw-bold text-dark">Artisanal Coffee, Roasted Locally, Poured Daily</h1>
             <p class="lead text-muted mb-4">Welcome to Project Nexus—a premium specialty café experience. Discover meticulously sourced single-origin coffees, handcrafted pastries, and a warm community space built around the love of brewing.</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <a href="menu.html" class="btn btn-primary btn-lg px-4 gap-3">Explore our menu</a>
-                <a href="contact.html" class="btn btn-outline-secondary btn-lg px-4">Book a Table</a>
+                <a href="contacts.html" class="btn btn-outline-secondary btn-lg px-4">Book a Table</a>
             </div>
         </div>
     </header>
+    
+    <div id="nexusHeroCarousel" class="carousel slide carousel-fade shadow-sm mb-5" data-bs-ride="carousel" data-bs-interval="4000">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#nexusHeroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#nexusHeroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#nexusHeroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="carousel-image-wrapper">
+                <img src="assets/images/home1.jpg" class="d-block w-100 carousel-optimized-img" alt="Cozy warm ambient lighting of Project Nexus flagship interior">
+                <div class="carousel-caption d-none d-md-block px-4 py-3 rounded">
+                    <h3 class="fw-bold h5 mb-1 text-white">The Flagship Space</h3>
+                    <p class="small mb-0 text-white-50">Designed for intentional gathering, quiet productivity, and sensory discovery.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="carousel-image-wrapper">
+                <img src="assets/images/drinks.jpg" class="d-block w-100 carousel-optimized-img" alt="Professional barista pulling a rich specialty espresso shot">
+                <div class="carousel-caption d-none d-md-block px-4 py-3 rounded">
+                    <h3 class="fw-bold h5 mb-1 text-white">Meticulous Extractions</h3>
+                    <p class="small mb-0 text-white-50">Every micro-lot is weighed, timed, and calibrated to its optimal flavor profile.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="carousel-image-wrapper">
+                <img src="assets/images/bakery1.jpg" class="d-block w-100 carousel-optimized-img" alt="Stack of golden, flaky, perfectly aerated laminated croissants">
+                <div class="carousel-caption d-none d-md-block px-4 py-3 rounded">
+                    <h3 class="fw-bold h5 mb-1 text-white">4:00 AM Lamination Shifts</h3>
+                    <p class="small mb-0 text-white-50">Flawlessly crisp outer shells opening up to light, cloud-like aerated layers.</p>
+                </div>
+            </div>
+            </div>
+         </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#nexusHeroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#nexusHeroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 
     <main class="container my-5">
     <div class="row g-4 py-5 row-cols-1 row-cols-md-3">
@@ -60,11 +110,14 @@
         </div>
     </div>
 </main>
-
+    <img src="assets/images/home.jpg" alt="home" class="team-img">
 <footer class="py-4 bg-dark text-white-50 mt-auto">
     <div class="container text-center">
         <small>&copy; 2026 Project Nexus Café. Built for Web Application Development Coursework.</small>
     </div>
 </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
