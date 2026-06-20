@@ -3,9 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Frequently Asked Questions | Project Nexus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">PROJECT NEXUS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Drinks Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bakery.html">Bakery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="coffee-beans.html">Shop Beans</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-light py-5 border-bottom text-center">
+        <div class="container my-4">
+            <h1 class="display-5 fw-bold">Operational FAQ</h1>
+            <p class="lead text-muted">Clear, descriptive information regarding our cyber-physical space, reservation standards, and sourcing guidelines.</p>
+        </div>
+    </header>
+
+    <main class="container my-5" style="max-width: 800px;">
+        <div class="accordion shadow-sm" id="faqAccordion">
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button fw-bold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What exactly is the "Project Nexus" concept?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-muted">
+                        Project Nexus is a conceptual hybrid cyber-physical space combining a premium specialty coffee slow-bar with an optimized, quiet co-working environment. We bridge the gap between third-wave coffee culture and technical productivity hubs.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed fw-bold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Where do you source your single-origin coffee beans?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-muted">
+                        We source our coffee directly from micro-lot farms across East Africa. Our primary selections highlight washed process lots from Nyeri County, Kenya, and complex, floral honey-processed variants from the Guji region in Ethiopia.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed fw-bold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Do I need a reservation to use the co-working tables?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-muted">
+                        Walk-ins are always welcome for general café seating. However, for our dedicated high-speed workshop desks equipped with individual power arrays, we highly recommend booking a slot in advance using our interactive online reservation form.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-4 bg-dark text-white-50 mt-auto">
+        <div class="container text-center">
+            <small>&copy; 2026 Project Nexus Café. Built for Web Application Development Coursework.</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
