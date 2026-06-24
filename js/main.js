@@ -105,7 +105,6 @@ function initFormValidation() {
     if (!form) return;
 
     form.addEventListener('submit', (event) => {
-        // Prevent traditional page reload behaviors
         event.preventDefault();
         event.stopPropagation();
 
@@ -122,7 +121,7 @@ function initFormValidation() {
             nameInput.classList.add('is-valid');
         }
 
-        // 2. Validate Email format via classic regex match
+        // 2. Validate Email format
         const emailInput = document.getElementById('form-email');
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(emailInput.value.trim())) {
