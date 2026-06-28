@@ -17,6 +17,36 @@
         </div>
     </header>
 
-    <div class="container my-5" id="delivery-root-content"></div>
+    <div class="container my-5" id="delivery-root-content">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card cafe-card p-4 shadow-sm">
+                    <h2 class="h4 fw-bold mb-4">Place Dispatch Order</h2>
+                    <form id="nexusDeliveryForm">
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Select Dispatch Category</label>
+                                <select class="form-select" id="itemCategory" required>
+                                    <option value="" disabled selected>Choose item type...</option>
+                                    <option value="beans">Whole Bean Single-Origins (250g bags)</option>
+                                    <option value="bakery">Artisanal Bakery Selection (Boxes of 4)</option>
+                                    <option value="bottled">Cold Brew Logistics Supplies (Pack of 6)</option>
+                                </select>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label small fw-semibold">Delivery Location Address</label>
+                                <input type="text" class="form-control" placeholder="Office block, Room, street details" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small fw-semibold">Contact Mobile Number</label>
+                                <input type="tel" class="form-control" placeholder="0712345678" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-dark w-100 mt-2">Submit Logistics Dispatch</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     </body>
 </html>
